@@ -1,0 +1,1284 @@
+diff --git a/harpoonreal/.gitignore b/harpoonreal/.gitignore
+new file mode 100644
+index 0000000..76faa53
+--- /dev/null
++++ b/harpoonreal/.gitignore
+@@ -0,0 +1,7 @@
++Binaries
++DerivedDataCache
++Intermediate
++Saved
++*.sdf
++*.sln
++*.suo
+\ No newline at end of file
+diff --git a/harpoonreal/Config/DefaultEditor.ini b/harpoonreal/Config/DefaultEditor.ini
+new file mode 100644
+index 0000000..6838df0
+--- /dev/null
++++ b/harpoonreal/Config/DefaultEditor.ini
+@@ -0,0 +1,5 @@
++[EditoronlyBP]
++bAllowClassAndBlueprintPinMatching=true
++bReplaceBlueprintWithClass=true
++bDontLoadBlueprintOutsideEditor=true
++bBlueprintIsNotBlueprintType=true
+diff --git a/harpoonreal/Config/DefaultEditorUserSettings.ini b/harpoonreal/Config/DefaultEditorUserSettings.ini
+new file mode 100644
+index 0000000..c0297f7
+--- /dev/null
++++ b/harpoonreal/Config/DefaultEditorUserSettings.ini
+@@ -0,0 +1,59 @@
++
++[/Script/UnrealEd.LevelEditorPlaySettings]
++GameGetsMouseControl=False
++MouseControlLabelPosition=LabelAnchorMode_TopLeft
++CenterNewWindow=False
++DisableStandaloneSound=False
++AdditionalLaunchParameters=
++PlayNetMode=PIE_Standalone
++RunUnderOneProcess=True
++PlayNetDedicated=False
++PlayNumberOfClients=2
++ClientWindowWidth=640
++RouteGamepadToSecondWindow=False
++ClientWindowHeight=480
++AdditionalServerGameOptions=
++AdditionalLaunchOptions=
++MultipleInstanceLastHeight=360
++MultipleInstanceLastWidth=640
+++MultipleInstancePositions=(X=0,Y=0)
+++MultipleInstancePositions=(X=0,Y=0)
+++MultipleInstancePositions=(X=672,Y=0)
++LastExecutedLaunchDevice=WindowsNoEditor@N4714
++LastExecutedLaunchName=N4714
++LastExecutedPlayModeType=PlayMode_InViewPort
++LastExecutedPlayModeType=PlayMode_InEditorFloating
+++LaptopScreenResolutions=(Description="Apple MacBook Air 11",Width=1366,Height=768,AspectRatio="16:9")
+++LaptopScreenResolutions=(Description="Apple MacBook Air 13\"",Width=1440,Height=900,AspectRatio="16:10")
+++LaptopScreenResolutions=(Description="Apple MacBook Pro 13\"",Width=1280,Height=800,AspectRatio="16:10")
+++LaptopScreenResolutions=(Description="Apple MacBook Pro 13\" (Retina)",Width=2560,Height=1600,AspectRatio="16:10")
+++LaptopScreenResolutions=(Description="Apple MacBook Pro 15\"",Width=1440,Height=900,AspectRatio="16:10")
+++LaptopScreenResolutions=(Description="Apple MacBook Pro 15\" (Retina)",Width=2880,Height=1800,AspectRatio="16:10")
+++LaptopScreenResolutions=(Description="Generic 14-15.6\" Notebook",Width=1366,Height=768,AspectRatio="16:9")
+++MonitorScreenResolutions=(Description="19\" monitor",Width=1440,Height=900,AspectRatio="16:10")
+++MonitorScreenResolutions=(Description="20\" monitor",Width=1600,Height=900,AspectRatio="16:9")
+++MonitorScreenResolutions=(Description="22\" monitor",Width=1680,Height=1050,AspectRatio="16:10")
+++MonitorScreenResolutions=(Description="21.5-24\" monitor",Width=1920,Height=1080,AspectRatio="16:9")
+++MonitorScreenResolutions=(Description="27\" monitor",Width=2560,Height=1440,AspectRatio="16:9")
+++PhoneScreenResolutions=(Description="Apple iPhone 4, 4S, iTouch 4 (Portrait)",Width=640,Height=960,AspectRatio="2:3")
+++PhoneScreenResolutions=(Description="Apple iPhone 4, 4S, iTouch 4 (Landscape)",Width=960,Height=640,AspectRatio="3:2")
+++PhoneScreenResolutions=(Description="Apple iPhone 5, 5S, iTouch 5 (Portrait)",Width=640,Height=1136,AspectRatio="~9:16")
+++PhoneScreenResolutions=(Description="Apple iPhone 5, 5S, iTouch 5 (Landscape)",Width=1136,Height=640,AspectRatio="~16:9")
+++PhoneScreenResolutions=(Description="HTC One (Portrait)",Width=1080,Height=1920,AspectRatio="9:16")
+++PhoneScreenResolutions=(Description="HTC One (Landscape)",Width=1029,Height=1080,AspectRatio="16:9")
+++PhoneScreenResolutions=(Description="Samsung Galaxy S4 (Portrait)",Width=1080,Height=1920,AspectRatio="9:16")
+++PhoneScreenResolutions=(Description="Samsung Galaxy S4 (Landscape)",Width=1920,Height=1080,AspectRatio="16:9")
+++TabletScreenResolutions=(Description="Apple iPad 2, iPad Mini (Portrait)",Width=768,Height=1024,AspectRatio="~3:4")
+++TabletScreenResolutions=(Description="Apple iPad 2, iPad Mini (Landscape)",Width=1024,Height=768,AspectRatio="~4:3")
+++TabletScreenResolutions=(Description="Apple iPad 3, 4, Air (Portrait)",Width=1536,Height=2048,AspectRatio="3:4")
+++TabletScreenResolutions=(Description="Apple iPad 3, 4, Air (Landscape)",Width=2048,Height=1536,AspectRatio="4:3")
+++TabletScreenResolutions=(Description="Microsoft Surface RT (Portrait)",Width=768,Height=1366,AspectRatio="9:16")
+++TabletScreenResolutions=(Description="Microsoft Surface RT (Landscape)",Width=1366,Height=768,AspectRatio="16:9")
+++TabletScreenResolutions=(Description="Microsoft Surface Pro (Portrait)",Width=1080,Height=1920,AspectRatio="9:16")
+++TabletScreenResolutions=(Description="Microsoft Surface Pro (Landscape)",Width=1920,Height=1080,AspectRatio="16:9")
+++TelevisionScreenResolutions=(Description="720p (HDTV, Blu-ray)",Width=1280,Height=720,AspectRatio="16:9")
+++TelevisionScreenResolutions=(Description="1080i, 1080p (HDTV, Blu-ray)",Width=1920,Height=1080,AspectRatio="16:9")
+++TelevisionScreenResolutions=(Description="4K Ultra HD",Width=3840,Height=2160,AspectRatio="16:9")
+++TelevisionScreenResolutions=(Description="4K Digital Cinema",Width=4096,Height=2160,AspectRatio="1.90:1")
++
++
+diff --git a/harpoonreal/Config/DefaultEngine.ini b/harpoonreal/Config/DefaultEngine.ini
+new file mode 100644
+index 0000000..4936b61
+--- /dev/null
++++ b/harpoonreal/Config/DefaultEngine.ini
+@@ -0,0 +1,84 @@
++[URL]
++GameName=harpoonreal
++
++[/Script/Engine.GameEngine]
+++NetDriverDefinitions=(DefName="GameNetDriver",DriverClassName="OnlineSubsystemSteam.SteamNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
++
++[OnlineSubsystem]
++DefaultPlatformService=Steam
++
++[OnlineSubsystemSteam]
++bEnabled=true
++SteamDevAppId=480
++bVACEnabled=0
++
++[/Script/OnlineSubsystemSteam.SteamNetDriver]
++NetConnectionClassName=OnlineSubsystemSteam.SteamNetConnection
++
++[/Script/Engine.PhysicsSettings]
++DefaultTerminalVelocity=4000.000000
++DefaultFluidFriction=0.300000
++bEnableAsyncScene=False
++LockedAxis=None
++FrictionCombineMode=Average
++MaxDepenetrationVelocity=0.000000
++bSimulateSkeletalMeshOnDedicatedServer=True
++MaxPhysicsDeltaTime=0.033333
++bSubstepping=True
++bSubsteppingAsync=False
++MaxSubstepDeltaTime=0.016667
++MaxSubsteps=12
++SyncSceneSmoothingFactor=0.000000
++AsyncSceneSmoothingFactor=0.990000
++InitialAverageFrameRate=0.016667
++
++[/Script/Engine.UserInterfaceSettings]
++UIScaleCurve=(EditorCurveData=(Keys=((Time=480,Value=0.444),(Time=720,Value=0.666),(Time=1080,Value=1.0),(Time=8640,Value=8.0))),ExternalCurve=None)
++UIScaleCurve=(EditorCurveData=(Keys=((Time=480.000000,Value=0.444000),(Time=720.000000,Value=0.666000),(Time=1080.000000,Value=1.000000),(Time=8640.000000,Value=8.000000))),ExternalCurve=None)
++
++[/Script/Engine.RendererSettings]
++r.MobileHDR=True
++r.AllowOcclusionQueries=True
++r.MinScreenRadiusForLights=0.030000
++r.MinScreenRadiusForDepthPrepass=0.030000
++r.PrecomputedVisibilityWarning=False
++r.TextureStreaming=True
++Compat.UseDXT5NormalMaps=False
++r.AllowStaticLighting=True
++r.NormalMapsForStaticLighting=False
++r.GBuffer=True
++r.GenerateMeshDistanceFields=True
++r.Shadow.DistanceFieldPenumbraSize=0.050000
++r.TessellationAdaptivePixelsPerTriangle=48.000000
++r.SeparateTranslucency=True
++r.CustomDepth=1
++r.DefaultFeature.Bloom=True
++r.DefaultFeature.AmbientOcclusion=True
++r.DefaultFeature.AmbientOcclusionStaticFraction=True
++r.DefaultFeature.AutoExposure=True
++r.DefaultFeature.MotionBlur=True
++r.DefaultFeature.LensFlare=True
++r.DefaultFeature.AntiAliasing=2
++r.EarlyZPass=3
++r.EarlyZPassMovable=False
++r.DBuffer=False
++r.ClearSceneMethod=1
++r.MSAA.CompositingSampleCount=4
++r.WireframeCullThreshold=5.000000
++UIScaleRule=ShortestSide
++UIScaleCurve=(EditorCurveData=(Keys=),ExternalCurve=None)
++
++[/Script/EngineSettings.GameMapsSettings]
++EditorStartupMap=/Engine/Maps/Templates/Template_Default
++EditorStartupMap=/Game/Maps/Level_01
++TransitionMap=
++bUseSplitscreen=True
++TwoPlayerSplitscreenLayout=Horizontal
++ThreePlayerSplitscreenLayout=FavorTop
++GameInstanceClass=/Script/Engine.GameInstance
++GameInstanceClass=/Game/Blueprints/MyGameInstance.MyGameInstance_C
++GameDefaultMap=/Engine/Maps/Entry
++GameDefaultMap=/Game/Maps/MainMenu
++GlobalDefaultServerGameMode=None
++
++
+diff --git a/harpoonreal/Config/DefaultGame.ini b/harpoonreal/Config/DefaultGame.ini
+new file mode 100644
+index 0000000..7ce9600
+--- /dev/null
++++ b/harpoonreal/Config/DefaultGame.ini
+@@ -0,0 +1,15 @@
++[/Script/EngineSettings.GeneralProjectSettings]
++ProjectID=4BBE694C4415721F031B28A031635966
++
++[/Script/UnrealEd.ProjectPackagingSettings]
++StagingDirectory=(Path="C:/ScratchMPShipping")
++ForDistribution=False
++UsePakFile=True
++UsePakFile=False
+++CulturesToStage=en
+++DirectoriesToAlwaysStageAsUFS=(Path=ThirdParty/Steamworks)
++
++[/Script/Engine.GameSession]
++MaxPlayers=2
++
++
+diff --git a/harpoonreal/Config/DefaultInput.ini b/harpoonreal/Config/DefaultInput.ini
+new file mode 100644
+index 0000000..c2abc0f
+--- /dev/null
++++ b/harpoonreal/Config/DefaultInput.ini
+@@ -0,0 +1,43 @@
++
++[/Script/Engine.InputSettings]
+++AxisConfig=(AxisKeyName="Gamepad_LeftX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_LeftY",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_RightX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_RightY",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="MouseX",AxisProperties=(DeadZone=0.000000,Sensitivity=0.070000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="MouseY",AxisProperties=(DeadZone=0.000000,Sensitivity=0.070000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_LeftX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_LeftY",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_RightX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="Gamepad_RightY",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="MouseX",AxisProperties=(DeadZone=0.000000,Sensitivity=0.070000,Exponent=1.000000,bInvert=False))
+++AxisConfig=(AxisKeyName="MouseY",AxisProperties=(DeadZone=0.000000,Sensitivity=0.070000,Exponent=1.000000,bInvert=False))
++bUseMouseForTouch=False
+++ActionMappings=(ActionName="Reload",Key=SpaceBar,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Reload",Key=MiddleMouseButton,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Fire",Key=LeftMouseButton,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="OpenInGameMenu",Key=Q,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Aim",Key=RightMouseButton,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Aim",Key=Gamepad_LeftTriggerAxis,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Fire",Key=Gamepad_RightTriggerAxis,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Reload",Key=MouseScrollUp,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="Reload",Key=MouseScrollDown,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++ActionMappings=(ActionName="OpenInGameMenu",Key=Escape,bShift=False,bCtrl=False,bAlt=False,bCmd=False)
+++AxisMappings=(AxisName="MoveForward",Key=W,Scale=1.000000)
+++AxisMappings=(AxisName="MoveForward",Key=S,Scale=-1.000000)
+++AxisMappings=(AxisName="MoveForward",Key=Up,Scale=1.000000)
+++AxisMappings=(AxisName="MoveForward",Key=Down,Scale=-1.000000)
+++AxisMappings=(AxisName="MoveForward",Key=Gamepad_LeftY,Scale=1.000000)
+++AxisMappings=(AxisName="MoveRight",Key=A,Scale=-1.000000)
+++AxisMappings=(AxisName="MoveRight",Key=D,Scale=1.000000)
+++AxisMappings=(AxisName="MoveRight",Key=Gamepad_LeftX,Scale=1.000000)
+++AxisMappings=(AxisName="TurnRate",Key=Gamepad_RightX,Scale=1.000000)
+++AxisMappings=(AxisName="TurnRate",Key=Left,Scale=-1.000000)
+++AxisMappings=(AxisName="TurnRate",Key=Right,Scale=1.000000)
+++AxisMappings=(AxisName="Turn",Key=MouseX,Scale=1.000000)
+++AxisMappings=(AxisName="LookUpRate",Key=Gamepad_RightY,Scale=1.000000)
+++AxisMappings=(AxisName="LookUp",Key=MouseY,Scale=-1.000000)
++ConsoleKey=None
+++ConsoleKeys=Tilde
++
++
+diff --git a/harpoonreal/Content/Animations/AimOffset_Gunslinger.uasset b/harpoonreal/Content/Animations/AimOffset_Gunslinger.uasset
+new file mode 100644
+index 0000000..554bbe8
+Binary files /dev/null and b/harpoonreal/Content/Animations/AimOffset_Gunslinger.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_CC.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_CC.uasset
+new file mode 100644
+index 0000000..8a903bd
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_CC.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_CL.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_CL.uasset
+new file mode 100644
+index 0000000..295d937
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_CL.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_CR.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_CR.uasset
+new file mode 100644
+index 0000000..2718e9e
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_CR.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_DC.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_DC.uasset
+new file mode 100644
+index 0000000..affe9bc
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_DC.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_DL.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_DL.uasset
+new file mode 100644
+index 0000000..f9dbc62
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_DL.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_DR.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_DR.uasset
+new file mode 100644
+index 0000000..d5811bd
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_DR.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_UC.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_UC.uasset
+new file mode 100644
+index 0000000..5accd27
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_UC.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_UL.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_UL.uasset
+new file mode 100644
+index 0000000..f3513a5
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_UL.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aim_UR.uasset b/harpoonreal/Content/Animations/Gunslinger_Aim_UR.uasset
+new file mode 100644
+index 0000000..aede19e
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aim_UR.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Aiming.uasset b/harpoonreal/Content/Animations/Gunslinger_Aiming.uasset
+new file mode 100644
+index 0000000..26a8cea
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Aiming.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Draw.uasset b/harpoonreal/Content/Animations/Gunslinger_Draw.uasset
+new file mode 100644
+index 0000000..f80c681
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Draw.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Fire.uasset b/harpoonreal/Content/Animations/Gunslinger_Fire.uasset
+new file mode 100644
+index 0000000..75347ea
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Fire.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Hit_01.uasset b/harpoonreal/Content/Animations/Gunslinger_Hit_01.uasset
+new file mode 100644
+index 0000000..dd6b7d8
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Hit_01.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_PullBack.uasset b/harpoonreal/Content/Animations/Gunslinger_PullBack.uasset
+new file mode 100644
+index 0000000..5bd0079
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_PullBack.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Ready.uasset b/harpoonreal/Content/Animations/Gunslinger_Ready.uasset
+new file mode 100644
+index 0000000..e38327e
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Ready.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_ResetAim.uasset b/harpoonreal/Content/Animations/Gunslinger_ResetAim.uasset
+new file mode 100644
+index 0000000..6a730d2
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_ResetAim.uasset differ
+diff --git a/harpoonreal/Content/Animations/Gunslinger_Unholster.uasset b/harpoonreal/Content/Animations/Gunslinger_Unholster.uasset
+new file mode 100644
+index 0000000..d88d8f7
+Binary files /dev/null and b/harpoonreal/Content/Animations/Gunslinger_Unholster.uasset differ
+diff --git a/harpoonreal/Content/Audio/Starter_Background_Cue.uasset b/harpoonreal/Content/Audio/Starter_Background_Cue.uasset
+new file mode 100644
+index 0000000..a2d42db
+Binary files /dev/null and b/harpoonreal/Content/Audio/Starter_Background_Cue.uasset differ
+diff --git a/harpoonreal/Content/Audio/Starter_Birds01.uasset b/harpoonreal/Content/Audio/Starter_Birds01.uasset
+new file mode 100644
+index 0000000..5452b97
+Binary files /dev/null and b/harpoonreal/Content/Audio/Starter_Birds01.uasset differ
+diff --git a/harpoonreal/Content/Audio/Starter_Wind05.uasset b/harpoonreal/Content/Audio/Starter_Wind05.uasset
+new file mode 100644
+index 0000000..71119c1
+Binary files /dev/null and b/harpoonreal/Content/Audio/Starter_Wind05.uasset differ
+diff --git a/harpoonreal/Content/Audio/Starter_Wind06.uasset b/harpoonreal/Content/Audio/Starter_Wind06.uasset
+new file mode 100644
+index 0000000..c8d307e
+Binary files /dev/null and b/harpoonreal/Content/Audio/Starter_Wind06.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/BP_MuzzleFlash.uasset b/harpoonreal/Content/Blueprints/BP_MuzzleFlash.uasset
+new file mode 100644
+index 0000000..a59d981
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/BP_MuzzleFlash.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/BP_Projectile.uasset b/harpoonreal/Content/Blueprints/BP_Projectile.uasset
+new file mode 100644
+index 0000000..08b922e
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/BP_Projectile.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/CamShake_01.uasset b/harpoonreal/Content/Blueprints/CamShake_01.uasset
+new file mode 100644
+index 0000000..342d155
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/CamShake_01.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/MyGameInstance.uasset b/harpoonreal/Content/Blueprints/MyGameInstance.uasset
+new file mode 100644
+index 0000000..a5d66bc
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/MyGameInstance.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/MyGameMode.uasset b/harpoonreal/Content/Blueprints/MyGameMode.uasset
+new file mode 100644
+index 0000000..4f00e38
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/MyGameMode.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/MyGameState.uasset b/harpoonreal/Content/Blueprints/MyGameState.uasset
+new file mode 100644
+index 0000000..ff9a0af
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/MyGameState.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/MyPlayerController.uasset b/harpoonreal/Content/Blueprints/MyPlayerController.uasset
+new file mode 100644
+index 0000000..3fe3fba
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/MyPlayerController.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/MyPlayerState.uasset b/harpoonreal/Content/Blueprints/MyPlayerState.uasset
+new file mode 100644
+index 0000000..0c07e93
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/MyPlayerState.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/State.uasset b/harpoonreal/Content/Blueprints/State.uasset
+new file mode 100644
+index 0000000..999eece
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/State.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/AmmoWidget.uasset b/harpoonreal/Content/Blueprints/Widgets/AmmoWidget.uasset
+new file mode 100644
+index 0000000..5bfe91b
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/AmmoWidget.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/ErrorDialog.uasset b/harpoonreal/Content/Blueprints/Widgets/ErrorDialog.uasset
+new file mode 100644
+index 0000000..733f8a7
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/ErrorDialog.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/InGameMenu.uasset b/harpoonreal/Content/Blueprints/Widgets/InGameMenu.uasset
+new file mode 100644
+index 0000000..74899b5
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/InGameMenu.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/LoadingScreen.uasset b/harpoonreal/Content/Blueprints/Widgets/LoadingScreen.uasset
+new file mode 100644
+index 0000000..d871b6e
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/LoadingScreen.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/MainMenu.uasset b/harpoonreal/Content/Blueprints/Widgets/MainMenu.uasset
+new file mode 100644
+index 0000000..19c1641
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/MainMenu.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/MyHUD.uasset b/harpoonreal/Content/Blueprints/Widgets/MyHUD.uasset
+new file mode 100644
+index 0000000..5a63433
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/MyHUD.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/ScoreboardRow.uasset b/harpoonreal/Content/Blueprints/Widgets/ScoreboardRow.uasset
+new file mode 100644
+index 0000000..11cc158
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/ScoreboardRow.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/ServerList.uasset b/harpoonreal/Content/Blueprints/Widgets/ServerList.uasset
+new file mode 100644
+index 0000000..8253905
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/ServerList.uasset differ
+diff --git a/harpoonreal/Content/Blueprints/Widgets/ServerRow.uasset b/harpoonreal/Content/Blueprints/Widgets/ServerRow.uasset
+new file mode 100644
+index 0000000..5d86183
+Binary files /dev/null and b/harpoonreal/Content/Blueprints/Widgets/ServerRow.uasset differ
+diff --git a/harpoonreal/Content/Effects/P_Hit.uasset b/harpoonreal/Content/Effects/P_Hit.uasset
+new file mode 100644
+index 0000000..8c46a6a
+Binary files /dev/null and b/harpoonreal/Content/Effects/P_Hit.uasset differ
+diff --git a/harpoonreal/Content/Effects/P_MuzzleFlash.uasset b/harpoonreal/Content/Effects/P_MuzzleFlash.uasset
+new file mode 100644
+index 0000000..edbcc5c
+Binary files /dev/null and b/harpoonreal/Content/Effects/P_MuzzleFlash.uasset differ
+diff --git a/harpoonreal/Content/Environment/Barrel.uasset b/harpoonreal/Content/Environment/Barrel.uasset
+new file mode 100644
+index 0000000..25ded73
+Binary files /dev/null and b/harpoonreal/Content/Environment/Barrel.uasset differ
+diff --git a/harpoonreal/Content/Environment/Building_00.uasset b/harpoonreal/Content/Environment/Building_00.uasset
+new file mode 100644
+index 0000000..1a287eb
+Binary files /dev/null and b/harpoonreal/Content/Environment/Building_00.uasset differ
+diff --git a/harpoonreal/Content/Environment/Building_01.uasset b/harpoonreal/Content/Environment/Building_01.uasset
+new file mode 100644
+index 0000000..894eab0
+Binary files /dev/null and b/harpoonreal/Content/Environment/Building_01.uasset differ
+diff --git a/harpoonreal/Content/Environment/Crate.uasset b/harpoonreal/Content/Environment/Crate.uasset
+new file mode 100644
+index 0000000..cfe3d17
+Binary files /dev/null and b/harpoonreal/Content/Environment/Crate.uasset differ
+diff --git a/harpoonreal/Content/Environment/Ground.uasset b/harpoonreal/Content/Environment/Ground.uasset
+new file mode 100644
+index 0000000..3cedbf9
+Binary files /dev/null and b/harpoonreal/Content/Environment/Ground.uasset differ
+diff --git a/harpoonreal/Content/Environment/Horse_TieUp.uasset b/harpoonreal/Content/Environment/Horse_TieUp.uasset
+new file mode 100644
+index 0000000..4d5d2d9
+Binary files /dev/null and b/harpoonreal/Content/Environment/Horse_TieUp.uasset differ
+diff --git a/harpoonreal/Content/Environment/Trough.uasset b/harpoonreal/Content/Environment/Trough.uasset
+new file mode 100644
+index 0000000..b60e3de
+Binary files /dev/null and b/harpoonreal/Content/Environment/Trough.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPersonFire_Montage.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPersonFire_Montage.uasset
+new file mode 100644
+index 0000000..f4e81fd
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPersonFire_Montage.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_AnimBP.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_AnimBP.uasset
+new file mode 100644
+index 0000000..964805a
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_AnimBP.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Fire.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Fire.uasset
+new file mode 100644
+index 0000000..81c8d44
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Fire.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Idle.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Idle.uasset
+new file mode 100644
+index 0000000..ea9e0f2
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Idle.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpEnd.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpEnd.uasset
+new file mode 100644
+index 0000000..df59ff1
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpEnd.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpLoop.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpLoop.uasset
+new file mode 100644
+index 0000000..85e1495
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpLoop.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpStart.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpStart.uasset
+new file mode 100644
+index 0000000..8d6e25b
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_JumpStart.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Run.uasset b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Run.uasset
+new file mode 100644
+index 0000000..27579f4
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Animations/FirstPerson_Run.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Audio/FirstPersonTemplateWeaponFire02.uasset b/harpoonreal/Content/FirstPerson/Audio/FirstPersonTemplateWeaponFire02.uasset
+new file mode 100644
+index 0000000..3329402
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Audio/FirstPersonTemplateWeaponFire02.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/M_UE4Man_Body.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/M_UE4Man_Body.uasset
+new file mode 100644
+index 0000000..aab8fc5
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/M_UE4Man_Body.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset
+new file mode 100644
+index 0000000..dc8644c
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset
+new file mode 100644
+index 0000000..6ed0034
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.uasset
+new file mode 100644
+index 0000000..9e0a7e1
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset
+new file mode 100644
+index 0000000..4fe91b3
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01.uasset
+new file mode 100644
+index 0000000..21c9e15
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset
+new file mode 100644
+index 0000000..5a132ac
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset
+new file mode 100644
+index 0000000..5829ff9
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset
+new file mode 100644
+index 0000000..503479c
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms.uasset b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms.uasset
+new file mode 100644
+index 0000000..51b8b09
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_PhysicsAsset.uasset b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_PhysicsAsset.uasset
+new file mode 100644
+index 0000000..0741ea9
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_PhysicsAsset.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_Skeleton.uasset b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_Skeleton.uasset
+new file mode 100644
+index 0000000..9f808fa
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Mesh/SK_Mannequin_Arms_Skeleton.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Textures/UE4_LOGO_CARD.uasset b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_LOGO_CARD.uasset
+new file mode 100644
+index 0000000..500d943
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_LOGO_CARD.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin_MAT_MASKA.uasset b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin_MAT_MASKA.uasset
+new file mode 100644
+index 0000000..6ecba03
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin_MAT_MASKA.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin__normals.uasset b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin__normals.uasset
+new file mode 100644
+index 0000000..fbfce11
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Character/Textures/UE4_Mannequin__normals.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/M_FPGun.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/M_FPGun.uasset
+new file mode 100644
+index 0000000..8ce197d
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/M_FPGun.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset
+new file mode 100644
+index 0000000..8abd7bd
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset
+new file mode 100644
+index 0000000..c3124ee
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset
+new file mode 100644
+index 0000000..a93197f
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset
+new file mode 100644
+index 0000000..b4064c1
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset
+new file mode 100644
+index 0000000..abb5c8f
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset
+new file mode 100644
+index 0000000..91bfa7b
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset
+new file mode 100644
+index 0000000..9003b8a
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset
+new file mode 100644
+index 0000000..7b8f783
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun.uasset
+new file mode 100644
+index 0000000..ad54f8f
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset
+new file mode 100644
+index 0000000..d0304a0
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_M.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_M.uasset
+new file mode 100644
+index 0000000..62349ed
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_M.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_N.uasset b/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_N.uasset
+new file mode 100644
+index 0000000..6744e80
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/FPWeapon/Textures/T_FPGun_N.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Meshes/BaseMaterial.uasset b/harpoonreal/Content/FirstPerson/Meshes/BaseMaterial.uasset
+new file mode 100644
+index 0000000..28877d4
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Meshes/BaseMaterial.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMaterial.uasset b/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMaterial.uasset
+new file mode 100644
+index 0000000..4f2cd31
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMaterial.uasset differ
+diff --git a/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMesh.uasset b/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMesh.uasset
+new file mode 100644
+index 0000000..e39eaaf
+Binary files /dev/null and b/harpoonreal/Content/FirstPerson/Meshes/FirstPersonProjectileMesh.uasset differ
+diff --git a/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset b/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset
+new file mode 100644
+index 0000000..a85f923
+Binary files /dev/null and b/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset differ
+diff --git a/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonProjectile.uasset b/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonProjectile.uasset
+new file mode 100644
+index 0000000..40b1e7e
+Binary files /dev/null and b/harpoonreal/Content/FirstPersonBP/Blueprints/FirstPersonProjectile.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/GunslingerTTP.uasset b/harpoonreal/Content/Gunslinger/GunslingerTTP.uasset
+new file mode 100644
+index 0000000..79a68dc
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/GunslingerTTP.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/GunslingerTTP_PhysicsAsset.uasset b/harpoonreal/Content/Gunslinger/GunslingerTTP_PhysicsAsset.uasset
+new file mode 100644
+index 0000000..aa8411a
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/GunslingerTTP_PhysicsAsset.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/GunslingerTTP_Skeleton.uasset b/harpoonreal/Content/Gunslinger/GunslingerTTP_Skeleton.uasset
+new file mode 100644
+index 0000000..c9392bf
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/GunslingerTTP_Skeleton.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/Gunslinger_AnimBP.uasset b/harpoonreal/Content/Gunslinger/Gunslinger_AnimBP.uasset
+new file mode 100644
+index 0000000..ab1b404
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/Gunslinger_AnimBP.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/Gunslinger_BP.uasset b/harpoonreal/Content/Gunslinger/Gunslinger_BP.uasset
+new file mode 100644
+index 0000000..a12817a
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/Gunslinger_BP.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/charactertest.uasset b/harpoonreal/Content/Gunslinger/charactertest.uasset
+new file mode 100644
+index 0000000..5c57ceb
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/charactertest.uasset differ
+diff --git a/harpoonreal/Content/Gunslinger/spear.uasset b/harpoonreal/Content/Gunslinger/spear.uasset
+new file mode 100644
+index 0000000..939d961
+Binary files /dev/null and b/harpoonreal/Content/Gunslinger/spear.uasset differ
+diff --git a/harpoonreal/Content/Maps/Level_01.umap b/harpoonreal/Content/Maps/Level_01.umap
+new file mode 100644
+index 0000000..db4c184
+Binary files /dev/null and b/harpoonreal/Content/Maps/Level_01.umap differ
+diff --git a/harpoonreal/Content/Maps/MainMenu.umap b/harpoonreal/Content/Maps/MainMenu.umap
+new file mode 100644
+index 0000000..4ead690
+Binary files /dev/null and b/harpoonreal/Content/Maps/MainMenu.umap differ
+diff --git a/harpoonreal/Content/Materials/M_Basic.uasset b/harpoonreal/Content/Materials/M_Basic.uasset
+new file mode 100644
+index 0000000..75450c6
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Basic.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Basic_Inst.uasset b/harpoonreal/Content/Materials/M_Basic_Inst.uasset
+new file mode 100644
+index 0000000..c72f4b2
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Basic_Inst.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Bullet.uasset b/harpoonreal/Content/Materials/M_Bullet.uasset
+new file mode 100644
+index 0000000..23c20d0
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Bullet.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Bullet_Inst.uasset b/harpoonreal/Content/Materials/M_Bullet_Inst.uasset
+new file mode 100644
+index 0000000..65e275f
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Bullet_Inst.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Gun.uasset b/harpoonreal/Content/Materials/M_Gun.uasset
+new file mode 100644
+index 0000000..3485d77
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Gun.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Hat.uasset b/harpoonreal/Content/Materials/M_Hat.uasset
+new file mode 100644
+index 0000000..0721804
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Hat.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Hat_Inst.uasset b/harpoonreal/Content/Materials/M_Hat_Inst.uasset
+new file mode 100644
+index 0000000..7435a42
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Hat_Inst.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_MuzzleFlash.uasset b/harpoonreal/Content/Materials/M_MuzzleFlash.uasset
+new file mode 100644
+index 0000000..2d25d11
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_MuzzleFlash.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_MuzzleFlash_Inst.uasset b/harpoonreal/Content/Materials/M_MuzzleFlash_Inst.uasset
+new file mode 100644
+index 0000000..e095abf
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_MuzzleFlash_Inst.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Player.uasset b/harpoonreal/Content/Materials/M_Player.uasset
+new file mode 100644
+index 0000000..309bcd4
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Player.uasset differ
+diff --git a/harpoonreal/Content/Materials/M_Player_Inst.uasset b/harpoonreal/Content/Materials/M_Player_Inst.uasset
+new file mode 100644
+index 0000000..7f5b3c0
+Binary files /dev/null and b/harpoonreal/Content/Materials/M_Player_Inst.uasset differ
+diff --git a/harpoonreal/Content/Meshes/Gun.uasset b/harpoonreal/Content/Meshes/Gun.uasset
+new file mode 100644
+index 0000000..72304bb
+Binary files /dev/null and b/harpoonreal/Content/Meshes/Gun.uasset differ
+diff --git a/harpoonreal/Content/Meshes/Hat.uasset b/harpoonreal/Content/Meshes/Hat.uasset
+new file mode 100644
+index 0000000..62d3008
+Binary files /dev/null and b/harpoonreal/Content/Meshes/Hat.uasset differ
+diff --git a/harpoonreal/Content/Meshes/Sphere.uasset b/harpoonreal/Content/Meshes/Sphere.uasset
+new file mode 100644
+index 0000000..4e78f9a
+Binary files /dev/null and b/harpoonreal/Content/Meshes/Sphere.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Blip_01.uasset b/harpoonreal/Content/Sounds/Blip_01.uasset
+new file mode 100644
+index 0000000..4a4d370
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Blip_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Blip_02.uasset b/harpoonreal/Content/Sounds/Blip_02.uasset
+new file mode 100644
+index 0000000..1938cea
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Blip_02.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Click_01.uasset b/harpoonreal/Content/Sounds/Click_01.uasset
+new file mode 100644
+index 0000000..7a6706c
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Click_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Coin_01.uasset b/harpoonreal/Content/Sounds/Coin_01.uasset
+new file mode 100644
+index 0000000..1d9670e
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Coin_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Coin_02.uasset b/harpoonreal/Content/Sounds/Coin_02.uasset
+new file mode 100644
+index 0000000..44241cf
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Coin_02.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Gunfire_01.uasset b/harpoonreal/Content/Sounds/Gunfire_01.uasset
+new file mode 100644
+index 0000000..178e86c
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Gunfire_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Hit_01.uasset b/harpoonreal/Content/Sounds/Hit_01.uasset
+new file mode 100644
+index 0000000..6a01158
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Hit_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Laser_01.uasset b/harpoonreal/Content/Sounds/Laser_01.uasset
+new file mode 100644
+index 0000000..23ea707
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Laser_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Laser_02.uasset b/harpoonreal/Content/Sounds/Laser_02.uasset
+new file mode 100644
+index 0000000..64884c1
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Laser_02.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Powerup_01.uasset b/harpoonreal/Content/Sounds/Powerup_01.uasset
+new file mode 100644
+index 0000000..57662b4
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Powerup_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Powerup_02.uasset b/harpoonreal/Content/Sounds/Powerup_02.uasset
+new file mode 100644
+index 0000000..3fa6cda
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Powerup_02.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_01.uasset b/harpoonreal/Content/Sounds/Randomize_01.uasset
+new file mode 100644
+index 0000000..48fd6bb
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_01.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_02.uasset b/harpoonreal/Content/Sounds/Randomize_02.uasset
+new file mode 100644
+index 0000000..c2cf7ec
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_02.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_03.uasset b/harpoonreal/Content/Sounds/Randomize_03.uasset
+new file mode 100644
+index 0000000..9a496b0
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_03.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_04.uasset b/harpoonreal/Content/Sounds/Randomize_04.uasset
+new file mode 100644
+index 0000000..98393ac
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_04.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_05.uasset b/harpoonreal/Content/Sounds/Randomize_05.uasset
+new file mode 100644
+index 0000000..4948191
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_05.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_06.uasset b/harpoonreal/Content/Sounds/Randomize_06.uasset
+new file mode 100644
+index 0000000..a1cdc5e
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_06.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_07.uasset b/harpoonreal/Content/Sounds/Randomize_07.uasset
+new file mode 100644
+index 0000000..701ea1f
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_07.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_08.uasset b/harpoonreal/Content/Sounds/Randomize_08.uasset
+new file mode 100644
+index 0000000..57f3d5d
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_08.uasset differ
+diff --git a/harpoonreal/Content/Sounds/Randomize_09.uasset b/harpoonreal/Content/Sounds/Randomize_09.uasset
+new file mode 100644
+index 0000000..39af68a
+Binary files /dev/null and b/harpoonreal/Content/Sounds/Randomize_09.uasset differ
+diff --git a/harpoonreal/Content/Sounds/SoundCue_Attentuated.uasset b/harpoonreal/Content/Sounds/SoundCue_Attentuated.uasset
+new file mode 100644
+index 0000000..a85e5c1
+Binary files /dev/null and b/harpoonreal/Content/Sounds/SoundCue_Attentuated.uasset differ
+diff --git a/harpoonreal/Content/Textures/Ammo_Empty.uasset b/harpoonreal/Content/Textures/Ammo_Empty.uasset
+new file mode 100644
+index 0000000..d564d90
+Binary files /dev/null and b/harpoonreal/Content/Textures/Ammo_Empty.uasset differ
+diff --git a/harpoonreal/Content/Textures/Ammo_Full.uasset b/harpoonreal/Content/Textures/Ammo_Full.uasset
+new file mode 100644
+index 0000000..b259f52
+Binary files /dev/null and b/harpoonreal/Content/Textures/Ammo_Full.uasset differ
+diff --git a/harpoonreal/Content/Textures/Metal_Tile_2.uasset b/harpoonreal/Content/Textures/Metal_Tile_2.uasset
+new file mode 100644
+index 0000000..c9e2248
+Binary files /dev/null and b/harpoonreal/Content/Textures/Metal_Tile_2.uasset differ
+diff --git a/harpoonreal/Content/Textures/Metal_Tile_2_N.uasset b/harpoonreal/Content/Textures/Metal_Tile_2_N.uasset
+new file mode 100644
+index 0000000..d95d00c
+Binary files /dev/null and b/harpoonreal/Content/Textures/Metal_Tile_2_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/MuzzleFlash.uasset b/harpoonreal/Content/Textures/MuzzleFlash.uasset
+new file mode 100644
+index 0000000..adac55e
+Binary files /dev/null and b/harpoonreal/Content/Textures/MuzzleFlash.uasset differ
+diff --git a/harpoonreal/Content/Textures/Sky54a2048.uasset b/harpoonreal/Content/Textures/Sky54a2048.uasset
+new file mode 100644
+index 0000000..99ff416
+Binary files /dev/null and b/harpoonreal/Content/Textures/Sky54a2048.uasset differ
+diff --git a/harpoonreal/Content/Textures/Sky54a2048LDR.uasset b/harpoonreal/Content/Textures/Sky54a2048LDR.uasset
+new file mode 100644
+index 0000000..455e4aa
+Binary files /dev/null and b/harpoonreal/Content/Textures/Sky54a2048LDR.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_ArmorMetal01.uasset b/harpoonreal/Content/Textures/T_ArmorMetal01.uasset
+new file mode 100644
+index 0000000..817065a
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_ArmorMetal01.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_ArmorMetal01_N.uasset b/harpoonreal/Content/Textures/T_ArmorMetal01_N.uasset
+new file mode 100644
+index 0000000..6ba3b5d
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_ArmorMetal01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Bark02_D.uasset b/harpoonreal/Content/Textures/T_Bark02_D.uasset
+new file mode 100644
+index 0000000..70378b2
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Bark02_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Bark02_N.uasset b/harpoonreal/Content/Textures/T_Bark02_N.uasset
+new file mode 100644
+index 0000000..251dabc
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Bark02_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Base_Metal_Gray_D.uasset b/harpoonreal/Content/Textures/T_Base_Metal_Gray_D.uasset
+new file mode 100644
+index 0000000..0306b97
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Base_Metal_Gray_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Base_Metal_Gray_N.uasset b/harpoonreal/Content/Textures/T_Base_Metal_Gray_N.uasset
+new file mode 100644
+index 0000000..6991cad
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Base_Metal_Gray_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Cliff_M.uasset b/harpoonreal/Content/Textures/T_Cliff_M.uasset
+new file mode 100644
+index 0000000..fd01c62
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Cliff_M.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Cliff_N.uasset b/harpoonreal/Content/Textures/T_Cliff_N.uasset
+new file mode 100644
+index 0000000..589f490
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Cliff_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_CobbleDark_01_D.uasset b/harpoonreal/Content/Textures/T_CobbleDark_01_D.uasset
+new file mode 100644
+index 0000000..cbd3e36
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_CobbleDark_01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_CobbleStone_04_D.uasset b/harpoonreal/Content/Textures/T_CobbleStone_04_D.uasset
+new file mode 100644
+index 0000000..9a67094
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_CobbleStone_04_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_CobbleStone_04_N.uasset b/harpoonreal/Content/Textures/T_CobbleStone_04_N.uasset
+new file mode 100644
+index 0000000..ae9ddef
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_CobbleStone_04_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_CobbleStone_04_R.uasset b/harpoonreal/Content/Textures/T_CobbleStone_04_R.uasset
+new file mode 100644
+index 0000000..6d4beea
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_CobbleStone_04_R.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_CobbleStone_04b_D.uasset b/harpoonreal/Content/Textures/T_CobbleStone_04b_D.uasset
+new file mode 100644
+index 0000000..398293d
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_CobbleStone_04b_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Cobble_01_H.uasset b/harpoonreal/Content/Textures/T_Cobble_01_H.uasset
+new file mode 100644
+index 0000000..5f60224
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Cobble_01_H.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete01_D.uasset b/harpoonreal/Content/Textures/T_Concrete01_D.uasset
+new file mode 100644
+index 0000000..c77ca35
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete01_N.uasset b/harpoonreal/Content/Textures/T_Concrete01_N.uasset
+new file mode 100644
+index 0000000..13b2385
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_01_D.uasset b/harpoonreal/Content/Textures/T_Concrete_01_D.uasset
+new file mode 100644
+index 0000000..f8e3b92
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_01_N.uasset b/harpoonreal/Content/Textures/T_Concrete_01_N.uasset
+new file mode 100644
+index 0000000..b5b92a2
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_D.uasset b/harpoonreal/Content/Textures/T_Concrete_D.uasset
+new file mode 100644
+index 0000000..d58c6d6
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Floor01.uasset b/harpoonreal/Content/Textures/T_Concrete_Floor01.uasset
+new file mode 100644
+index 0000000..32321bd
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Floor01.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Floor01_N.uasset b/harpoonreal/Content/Textures/T_Concrete_Floor01_N.uasset
+new file mode 100644
+index 0000000..8309a48
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Floor01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_N.uasset b/harpoonreal/Content/Textures/T_Concrete_N.uasset
+new file mode 100644
+index 0000000..b1ee82a
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Wall07.uasset b/harpoonreal/Content/Textures/T_Concrete_Wall07.uasset
+new file mode 100644
+index 0000000..57928f8
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Wall07.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Wall07_N.uasset b/harpoonreal/Content/Textures/T_Concrete_Wall07_N.uasset
+new file mode 100644
+index 0000000..f634532
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Wall07_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Wall_D.uasset b/harpoonreal/Content/Textures/T_Concrete_Wall_D.uasset
+new file mode 100644
+index 0000000..c486fdc
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Wall_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Concrete_Wall_N.uasset b/harpoonreal/Content/Textures/T_Concrete_Wall_N.uasset
+new file mode 100644
+index 0000000..970f892
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Concrete_Wall_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_DesertCrystal01_N.uasset b/harpoonreal/Content/Textures/T_DesertCrystal01_N.uasset
+new file mode 100644
+index 0000000..a221b38
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_DesertCrystal01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Dirt_D.uasset b/harpoonreal/Content/Textures/T_Dirt_D.uasset
+new file mode 100644
+index 0000000..6d5efdf
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Dirt_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Dirt_N.uasset b/harpoonreal/Content/Textures/T_Dirt_N.uasset
+new file mode 100644
+index 0000000..fd2c5b2
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Dirt_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base02.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base02.uasset
+new file mode 100644
+index 0000000..66a6a38
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base02.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base02_N.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base02_N.uasset
+new file mode 100644
+index 0000000..f0ba1cc
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base02_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_D.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_D.uasset
+new file mode 100644
+index 0000000..39052cb
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_N.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_N.uasset
+new file mode 100644
+index 0000000..ee8c2cd
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base04_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06.uasset
+new file mode 100644
+index 0000000..9a84d42
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06_N.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06_N.uasset
+new file mode 100644
+index 0000000..2e412d5
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_06_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07.uasset
+new file mode 100644
+index 0000000..55dc6e3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07_N.uasset b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07_N.uasset
+new file mode 100644
+index 0000000..fc29f44
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Generic_Concrete_Base_07_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Gravel_D.uasset b/harpoonreal/Content/Textures/T_Gravel_D.uasset
+new file mode 100644
+index 0000000..8cc86a3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Gravel_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Gravel_N.uasset b/harpoonreal/Content/Textures/T_Gravel_N.uasset
+new file mode 100644
+index 0000000..3f811a8
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Gravel_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_01_D.uasset b/harpoonreal/Content/Textures/T_Ground_01_D.uasset
+new file mode 100644
+index 0000000..adc3d2e
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_01_N.uasset b/harpoonreal/Content/Textures/T_Ground_01_N.uasset
+new file mode 100644
+index 0000000..4d33da3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_02_D.uasset b/harpoonreal/Content/Textures/T_Ground_02_D.uasset
+new file mode 100644
+index 0000000..968f261
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_02_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_02_N.uasset b/harpoonreal/Content/Textures/T_Ground_02_N.uasset
+new file mode 100644
+index 0000000..0d96fa6
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_02_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_Detail_N.uasset b/harpoonreal/Content/Textures/T_Ground_Detail_N.uasset
+new file mode 100644
+index 0000000..3b04286
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_Detail_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_Dirt_D.uasset b/harpoonreal/Content/Textures/T_Ground_Dirt_D.uasset
+new file mode 100644
+index 0000000..5fe5042
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_Dirt_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_Dirt_N.uasset b/harpoonreal/Content/Textures/T_Ground_Dirt_N.uasset
+new file mode 100644
+index 0000000..44b4d47
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_Dirt_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Ground_Noise_N.uasset b/harpoonreal/Content/Textures/T_Ground_Noise_N.uasset
+new file mode 100644
+index 0000000..88d1f9b
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Ground_Noise_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_E.uasset b/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_E.uasset
+new file mode 100644
+index 0000000..dd08055
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_E.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_N.uasset b/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_N.uasset
+new file mode 100644
+index 0000000..26ca3a1
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Dark_Gun_metal_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Metal01_D.uasset b/harpoonreal/Content/Textures/T_Metal_Metal01_D.uasset
+new file mode 100644
+index 0000000..fb5685e
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Metal01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Metal01_N.uasset b/harpoonreal/Content/Textures/T_Metal_Metal01_N.uasset
+new file mode 100644
+index 0000000..50d800d
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Metal01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Metal03_D.uasset b/harpoonreal/Content/Textures/T_Metal_Metal03_D.uasset
+new file mode 100644
+index 0000000..a73b6c0
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Metal03_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Metal03_N.uasset b/harpoonreal/Content/Textures/T_Metal_Metal03_N.uasset
+new file mode 100644
+index 0000000..2dfc30f
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Metal03_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Painted_04_D.uasset b/harpoonreal/Content/Textures/T_Metal_Painted_04_D.uasset
+new file mode 100644
+index 0000000..f265424
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Painted_04_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Painted_04_N.uasset b/harpoonreal/Content/Textures/T_Metal_Painted_04_N.uasset
+new file mode 100644
+index 0000000..7f9870b
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Painted_04_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Rust_01_D.uasset b/harpoonreal/Content/Textures/T_Metal_Rust_01_D.uasset
+new file mode 100644
+index 0000000..b8990ad
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Rust_01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Rust_01_N.uasset b/harpoonreal/Content/Textures/T_Metal_Rust_01_N.uasset
+new file mode 100644
+index 0000000..29dd285
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Rust_01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Scuffed_D.uasset b/harpoonreal/Content/Textures/T_Metal_Scuffed_D.uasset
+new file mode 100644
+index 0000000..e6017cb
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Scuffed_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Metal_Scuffed_N.uasset b/harpoonreal/Content/Textures/T_Metal_Scuffed_N.uasset
+new file mode 100644
+index 0000000..592a1ec
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Metal_Scuffed_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Paint_Metal_Rust_D.uasset b/harpoonreal/Content/Textures/T_Paint_Metal_Rust_D.uasset
+new file mode 100644
+index 0000000..0f59bf3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Paint_Metal_Rust_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Paint_Metal_Rust_N.uasset b/harpoonreal/Content/Textures/T_Paint_Metal_Rust_N.uasset
+new file mode 100644
+index 0000000..9eb5eb4
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Paint_Metal_Rust_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_PaintedMetal01.uasset b/harpoonreal/Content/Textures/T_PaintedMetal01.uasset
+new file mode 100644
+index 0000000..a906e49
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_PaintedMetal01.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_PaintedMetal01_N.uasset b/harpoonreal/Content/Textures/T_PaintedMetal01_N.uasset
+new file mode 100644
+index 0000000..25804b6
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_PaintedMetal01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_PatchyGrass_D.uasset b/harpoonreal/Content/Textures/T_PatchyGrass_D.uasset
+new file mode 100644
+index 0000000..0e6d8b1
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_PatchyGrass_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_PatchyGrass_N.uasset b/harpoonreal/Content/Textures/T_PatchyGrass_N.uasset
+new file mode 100644
+index 0000000..ff9019b
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_PatchyGrass_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_01_D.uasset b/harpoonreal/Content/Textures/T_Rock_01_D.uasset
+new file mode 100644
+index 0000000..5e8267e
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_01_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_01_N.uasset b/harpoonreal/Content/Textures/T_Rock_01_N.uasset
+new file mode 100644
+index 0000000..f4584ef
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_03_D.uasset b/harpoonreal/Content/Textures/T_Rock_03_D.uasset
+new file mode 100644
+index 0000000..5b248e7
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_03_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_03_N.uasset b/harpoonreal/Content/Textures/T_Rock_03_N.uasset
+new file mode 100644
+index 0000000..3b6eef2
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_03_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_05_D.uasset b/harpoonreal/Content/Textures/T_Rock_05_D.uasset
+new file mode 100644
+index 0000000..6bd2469
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_05_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_05_N.uasset b/harpoonreal/Content/Textures/T_Rock_05_N.uasset
+new file mode 100644
+index 0000000..d1efe72
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_05_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_06_D.uasset b/harpoonreal/Content/Textures/T_Rock_06_D.uasset
+new file mode 100644
+index 0000000..596a18c
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_06_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_06_N.uasset b/harpoonreal/Content/Textures/T_Rock_06_N.uasset
+new file mode 100644
+index 0000000..66b856e
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_06_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_07_D.uasset b/harpoonreal/Content/Textures/T_Rock_07_D.uasset
+new file mode 100644
+index 0000000..333d3d2
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_07_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_07_N.uasset b/harpoonreal/Content/Textures/T_Rock_07_N.uasset
+new file mode 100644
+index 0000000..84125c9
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_07_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_07b_D.uasset b/harpoonreal/Content/Textures/T_Rock_07b_D.uasset
+new file mode 100644
+index 0000000..f86e6a3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_07b_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_08_D.uasset b/harpoonreal/Content/Textures/T_Rock_08_D.uasset
+new file mode 100644
+index 0000000..804627e
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_08_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_08_N.uasset b/harpoonreal/Content/Textures/T_Rock_08_N.uasset
+new file mode 100644
+index 0000000..45fdae8
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_08_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_09_D.uasset b/harpoonreal/Content/Textures/T_Rock_09_D.uasset
+new file mode 100644
+index 0000000..94523f3
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_09_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_10_D.uasset b/harpoonreal/Content/Textures/T_Rock_10_D.uasset
+new file mode 100644
+index 0000000..0119f58
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_10_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_10_N.uasset b/harpoonreal/Content/Textures/T_Rock_10_N.uasset
+new file mode 100644
+index 0000000..dfdbac5
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_10_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_11b_D.uasset b/harpoonreal/Content/Textures/T_Rock_11b_D.uasset
+new file mode 100644
+index 0000000..0e1203a
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_11b_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_Detail_02_D.uasset b/harpoonreal/Content/Textures/T_Rock_Detail_02_D.uasset
+new file mode 100644
+index 0000000..35ad340
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_Detail_02_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_Detail_02_N.uasset b/harpoonreal/Content/Textures/T_Rock_Detail_02_N.uasset
+new file mode 100644
+index 0000000..fd65917
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_Detail_02_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rock_Detail_03_D.uasset b/harpoonreal/Content/Textures/T_Rock_Detail_03_D.uasset
+new file mode 100644
+index 0000000..e4b2f1c
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rock_Detail_03_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Rocky_01_N.uasset b/harpoonreal/Content/Textures/T_Rocky_01_N.uasset
+new file mode 100644
+index 0000000..1459098
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Rocky_01_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Sky_Clouds_M.uasset b/harpoonreal/Content/Textures/T_Sky_Clouds_M.uasset
+new file mode 100644
+index 0000000..b55174c
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Sky_Clouds_M.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Sky_Stars.uasset b/harpoonreal/Content/Textures/T_Sky_Stars.uasset
+new file mode 100644
+index 0000000..1e4415b
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Sky_Stars.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Stone_Brick_D.uasset b/harpoonreal/Content/Textures/T_Stone_Brick_D.uasset
+new file mode 100644
+index 0000000..9dc00e9
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Stone_Brick_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Stone_Brick_N.uasset b/harpoonreal/Content/Textures/T_Stone_Brick_N.uasset
+new file mode 100644
+index 0000000..aa55e54
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Stone_Brick_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_UNV_Concrete02.uasset b/harpoonreal/Content/Textures/T_UNV_Concrete02.uasset
+new file mode 100644
+index 0000000..efbc868
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_UNV_Concrete02.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_UNV_Concrete02_N.uasset b/harpoonreal/Content/Textures/T_UNV_Concrete02_N.uasset
+new file mode 100644
+index 0000000..8806294
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_UNV_Concrete02_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Underground_Base_Pipe_D.uasset b/harpoonreal/Content/Textures/T_Underground_Base_Pipe_D.uasset
+new file mode 100644
+index 0000000..a427075
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Underground_Base_Pipe_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Underground_Base_Pipe_N.uasset b/harpoonreal/Content/Textures/T_Underground_Base_Pipe_N.uasset
+new file mode 100644
+index 0000000..4f3ea2f
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Underground_Base_Pipe_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_White_Painted_Metal_D.uasset b/harpoonreal/Content/Textures/T_White_Painted_Metal_D.uasset
+new file mode 100644
+index 0000000..9dcc80f
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_White_Painted_Metal_D.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_White_Painted_Metal_N.uasset b/harpoonreal/Content/Textures/T_White_Painted_Metal_N.uasset
+new file mode 100644
+index 0000000..9647701
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_White_Painted_Metal_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Wood_A_N.uasset b/harpoonreal/Content/Textures/T_Wood_A_N.uasset
+new file mode 100644
+index 0000000..c87b589
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Wood_A_N.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Wood_A_S.uasset b/harpoonreal/Content/Textures/T_Wood_A_S.uasset
+new file mode 100644
+index 0000000..dc4619d
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Wood_A_S.uasset differ
+diff --git a/harpoonreal/Content/Textures/T_Wood_a_d.uasset b/harpoonreal/Content/Textures/T_Wood_a_d.uasset
+new file mode 100644
+index 0000000..8216098
+Binary files /dev/null and b/harpoonreal/Content/Textures/T_Wood_a_d.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/8x8x8.uasset b/harpoonreal/Content/importsvoxel/8x8x8.uasset
+new file mode 100644
+index 0000000..7acc03f
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/8x8x8.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/8x8x8_-_Copy.uasset b/harpoonreal/Content/importsvoxel/8x8x8_-_Copy.uasset
+new file mode 100644
+index 0000000..bf81487
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/8x8x8_-_Copy.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/8x8x8_-_Copy_Mat.uasset b/harpoonreal/Content/importsvoxel/8x8x8_-_Copy_Mat.uasset
+new file mode 100644
+index 0000000..921250d
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/8x8x8_-_Copy_Mat.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/cannons.uasset b/harpoonreal/Content/importsvoxel/cannons.uasset
+new file mode 100644
+index 0000000..550c92c
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/cannons.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/defaultMat.uasset b/harpoonreal/Content/importsvoxel/defaultMat.uasset
+new file mode 100644
+index 0000000..d46d0d7
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/defaultMat.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/turret.uasset b/harpoonreal/Content/importsvoxel/turret.uasset
+new file mode 100644
+index 0000000..9156dfd
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/turret.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/turret_Mat.uasset b/harpoonreal/Content/importsvoxel/turret_Mat.uasset
+new file mode 100644
+index 0000000..20e0e6b
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/turret_Mat.uasset differ
+diff --git a/harpoonreal/Content/importsvoxel/turret_mesh.uasset b/harpoonreal/Content/importsvoxel/turret_mesh.uasset
+new file mode 100644
+index 0000000..1e59f85
+Binary files /dev/null and b/harpoonreal/Content/importsvoxel/turret_mesh.uasset differ
+diff --git a/harpoonreal/harpoonreal.png b/harpoonreal/harpoonreal.png
+new file mode 100644
+index 0000000..aa5e112
+Binary files /dev/null and b/harpoonreal/harpoonreal.png differ
+diff --git a/harpoonreal/harpoonreal.uproject b/harpoonreal/harpoonreal.uproject
+new file mode 100644
+index 0000000..f01cda1
+--- /dev/null
++++ b/harpoonreal/harpoonreal.uproject
+@@ -0,0 +1,6 @@
++{
++	"FileVersion": 3,
++	"EngineAssociation": "4.8",
++	"Category": "",
++	"Description": ""
++}
+\ No newline at end of file
+diff --git a/harpoonreal/tanks_tanks/.svn/entries b/harpoonreal/tanks_tanks/.svn/entries
+new file mode 100644
+index 0000000..48082f7
+--- /dev/null
++++ b/harpoonreal/tanks_tanks/.svn/entries
+@@ -0,0 +1 @@
++12
+diff --git a/harpoonreal/tanks_tanks/.svn/format b/harpoonreal/tanks_tanks/.svn/format
+new file mode 100644
+index 0000000..48082f7
+--- /dev/null
++++ b/harpoonreal/tanks_tanks/.svn/format
+@@ -0,0 +1 @@
++12
+diff --git a/harpoonreal/tanks_tanks/.svn/wc.db b/harpoonreal/tanks_tanks/.svn/wc.db
+new file mode 100644
+index 0000000..c7191fe
+Binary files /dev/null and b/harpoonreal/tanks_tanks/.svn/wc.db differ
+diff --git a/harpoonreal/tanks_tanks/.svn/wc.db-journal b/harpoonreal/tanks_tanks/.svn/wc.db-journal
+new file mode 100644
+index 0000000..e69de29
